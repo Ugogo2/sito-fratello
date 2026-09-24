@@ -83,38 +83,78 @@
             placeholder="333 1234567"
           >
         </div>
-        <div>
-          <label for="servizio">
-            Servizio richiesto *
-          </label>
-          <select
-            id="servizio"
-            name="servizio"
-            required
-          >
-            <option value="">
-              Seleziona un servizio
-            </option>
-            <option value="Pratiche edilizie">
-              Pratiche edilizie
-            </option>
-            <option value="Pratiche catastali">
-              Pratiche catastali
-            </option>
-            <option value="Topografia">
-              Topografia
-            </option>
-            <option value="Rilievi">
-              Rilievi
-            </option>
-            <option value="Consulenza tecnica">
-              Consulenza tecnica
-            </option>
-            <option value="Altro">
-              Altro
-            </option>
-          </select>
-        </div>
+        <!-- SERVIZI RICHIESTI -->
+
+<div class="servizi-richiesti">
+
+  <label>
+    Servizi richiesti *
+  </label>
+
+  <p class="descrizione-servizi">
+    Seleziona uno o più servizi di tuo interesse.
+  </p>
+
+  <div class="checkbox-servizi">
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Pratiche edilizie"
+      >
+      Pratiche edilizie
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Pratiche catastali"
+      >
+      Pratiche catastali
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Topografia"
+      >
+      Topografia
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Rilievi"
+      >
+      Rilievi
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Consulenza tecnica"
+      >
+      Consulenza tecnica
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="servizi[]"
+        value="Altro"
+      >
+      Altro
+    </label>
+
+  </div>
+
+</div>
+
         <div>
           <label for="messaggio">
             Descrizione della richiesta *
