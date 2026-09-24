@@ -1,11 +1,20 @@
-/* Stile base per tutte le pagine */
+/* ========================================
+   STILE GENERALE
+   ======================================== */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
+
+
+/* ========================================
+   HEADER
+   ======================================== */
 
 header {
   background-color: #004080;
@@ -14,46 +23,241 @@ header {
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+
+/* ========================================
+   MENU DI NAVIGAZIONE
+   ======================================== */
+
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
+
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 25px;
+
+  flex-wrap: wrap;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+
+  padding: 8px 12px;
+  border-radius: 5px;
+
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #0059b3;
+  text-decoration: none;
 }
+
+
+/* ========================================
+   CONTENUTO PRINCIPALE
+   ======================================== */
 
 main {
-  padding: 20px;
+  padding: 30px 20px;
   max-width: 800px;
-  margin: auto;
+  margin: 30px auto;
+
   background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+
+  border-radius: 8px;
 }
 
-footer {
+main h2 {
+  color: #004080;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+
+/* ========================================
+   FORM PREVENTIVO
+   ======================================== */
+
+form {
+  margin-top: 30px;
+}
+
+
+/* Contenitore di ogni campo */
+
+form > div {
+  margin-bottom: 20px;
+}
+
+
+/* Etichette */
+
+form label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: bold;
+  color: #004080;
+}
+
+
+/* ========================================
+   CAMPI INPUT
+   ======================================== */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+
+  background-color: #fafafa;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+/* Effetto quando si clicca dentro un campo */
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+
+  border-color: #004080;
+
+  background-color: white;
+
+  box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.12);
+}
+
+
+/* Textarea */
+
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+
+/* Placeholder */
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #999;
+}
+
+
+/* ========================================
+   CHECKBOX PRIVACY
+   ======================================== */
+
+form input[type="checkbox"] {
+  width: auto;
+
+  margin-right: 8px;
+
+  accent-color: #004080;
+}
+
+form label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+
+  font-weight: normal;
+
+  color: #555;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   PULSANTE INVIO
+   ======================================== */
+
+form button {
+  display: block;
+
+  width: 100%;
+
+  padding: 14px 20px;
+
+  margin-top: 10px;
+
   background-color: #004080;
   color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
-.mappa {
-  margin-top: 20px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
+
+
+/* Hover pulsante */
+
+form button:hover {
+  background-color: #0059b3;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transform: translateY(-1px);
 }
+
+
+/* Quando viene cliccato */
+
+form button:active {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   FOTO GEOMETRA
+   ======================================== */
+
 .foto-geometra {
   margin: 20px auto;
   text-align: center;
@@ -62,6 +266,96 @@ footer {
 .foto-geometra img {
   max-width: 100%;
   height: auto;
+
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   MAPPA
+   ======================================== */
+
+.mappa {
+  margin-top: 20px;
+
+  border: 2px solid #ccc;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  background-color: #004080;
+  color: white;
+
+  text-align: center;
+
+  padding: 15px;
+
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* ========================================
+   RESPONSIVE - SMARTPHONE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 7px 9px;
+    font-size: 14px;
+  }
+
+  main {
+    margin: 15px 10px;
+    padding: 20px 15px;
+
+    border-radius: 6px;
+  }
+
+  main h2 {
+    font-size: 23px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    font-size: 16px;
+  }
+
+  form button {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
