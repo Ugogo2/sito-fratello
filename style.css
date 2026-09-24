@@ -1,423 +1,243 @@
-/* ========================================
-   STILE GENERALE
-   ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f4f6f8;
   color: #333;
   line-height: 1.6;
 }
 
-
-/* ========================================
-   HEADER
-   ======================================== */
-
 header {
-  background-color: #004080;
+  background: linear-gradient(135deg, #003366, #004080, #0059a6);
   color: white;
-  padding: 20px;
+  padding: 24px 20px;
   text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
   margin: 0;
   font-size: 30px;
+  letter-spacing: 0.3px;
 }
-
-
-/* ========================================
-   MENU DI NAVIGAZIONE
-   ======================================== */
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 15px 0 0 0;
+  margin: 18px 0 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 8px;
 
   flex-wrap: wrap;
 }
 
 nav a {
+  display: block;
+
   color: white;
   text-decoration: none;
   font-weight: bold;
 
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 9px 15px;
 
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+
+  transition: all 0.25s ease;
 }
 
 nav a:hover {
-  background-color: #0059b3;
-  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
 }
 
-
-/* ========================================
-   CONTENUTO PRINCIPALE
-   ======================================== */
-
 main {
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: 30px auto;
+  width: calc(100% - 40px);
+  max-width: 900px;
+
+  margin: 40px auto;
+
+  padding: 0;
 
   background-color: white;
 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+  border-radius: 12px;
 
-  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+main section {
+  padding: 40px;
 }
 
 main h2 {
   color: #004080;
-  margin-top: 0;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin: 0 0 15px;
 }
 
-main p {
-  margin-bottom: 20px;
-}
-
-
-/* ========================================
-   FORM PREVENTIVO
-   ======================================== */
-
-form {
+main h3 {
+  color: #004080;
   margin-top: 30px;
 }
 
-
-/* Contenitore di ogni campo */
-
-form > div {
+main p {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
+main a {
+  color: #004080;
+}
 
-/* Etichette */
+main a:hover {
+  color: #0066b3;
+}
+
+form {
+  margin-top: 30px;
+  padding: 30px;
+
+  background-color: #f8fafc;
+
+  border: 1px solid #e1e6eb;
+
+  border-radius: 10px;
+}
+
+form > div {
+  margin-bottom: 22px;
+}
 
 form label {
   display: block;
 
   margin-bottom: 7px;
 
-  font-weight: bold;
   color: #004080;
+
+  font-size: 14px;
+  font-weight: bold;
 }
-
-
-/* ========================================
-   CAMPI INPUT
-   ======================================== */
 
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
+form input[type="file"],
 form select,
 form textarea {
+  display: block;
+
   width: 100%;
 
-  box-sizing: border-box;
+  padding: 13px 15px;
 
-  padding: 12px 14px;
+  border: 1px solid #ccd4dd;
 
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 7px;
+
+  background-color: white;
+
+  color: #333;
 
   font-family: Arial, sans-serif;
   font-size: 15px;
 
-  background-color: #fafafa;
-
   transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
-
-
-/* Effetto quando si clicca dentro un campo */
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="tel"]:focus,
+form input[type="file"]:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
 
-  border-color: #004080;
+  border-color: #0066b3;
 
   background-color: white;
 
-  box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.12);
+  box-shadow: 0 0 0 3px rgba(0, 102, 179, 0.12);
 }
-
-
-/* Textarea */
-
-form textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-
-/* Placeholder */
 
 form input::placeholder,
 form textarea::placeholder {
   color: #999;
 }
 
-
-/* ========================================
-   CHECKBOX PRIVACY
-   ======================================== */
-
-form input[type="checkbox"] {
-  width: auto;
-
-  margin-right: 8px;
-
-  accent-color: #004080;
+form textarea {
+  min-height: 160px;
+  resize: vertical;
 }
 
-form label:has(input[type="checkbox"]) {
-  display: flex;
-  align-items: center;
-
-  font-weight: normal;
-
-  color: #555;
-
+form select {
   cursor: pointer;
 }
 
-
-/* ========================================
-   PULSANTE INVIO
-   ======================================== */
+form input[type="file"] {
+  cursor: pointer;
+  padding: 10px;
+}
 
 form button {
   display: block;
 
   width: 100%;
 
-  padding: 14px 20px;
+  padding: 15px 20px;
 
   margin-top: 10px;
 
-  background-color: #004080;
+  border: none;
+  border-radius: 7px;
+
+  background: linear-gradient(135deg, #004080, #0066b3);
+
   color: white;
 
-  border: none;
-  border-radius: 6px;
-
+  font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
 
   cursor: pointer;
 
+  box-shadow: 0 4px 10px rgba(0, 64, 128, 0.2);
+
   transition:
-    background-color 0.3s ease,
+    background 0.25s ease,
     transform 0.2s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.25s ease;
 }
-
-
-/* Hover pulsante */
 
 form button:hover {
-  background-color: #0059b3;
+  background: linear-gradient(135deg, #003366, #0059a6);
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 
-  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 64, 128, 0.3);
 }
-
-
-/* Quando viene cliccato */
 
 form button:active {
   transform: translateY(0);
 }
 
-
-/* ========================================
-   FOTO GEOMETRA
-   ======================================== */
-
-.foto-geometra {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.foto-geometra img {
-  max-width: 100%;
-  height: auto;
-
-  border-radius: 8px;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-
-/* ========================================
-   MAPPA
-   ======================================== */
-
-.mappa {
-  margin-top: 20px;
-
-  border: 2px solid #ccc;
-
-  border-radius: 8px;
-
-  overflow: hidden;
-}
-
-
-/* ========================================
-   FOOTER
-   ======================================== */
-
-footer {
-  background-color: #004080;
-  color: white;
-
-  text-align: center;
-
-  padding: 15px;
-
-  margin-top: 30px;
-}
-
-footer p {
-  margin: 0;
-}
-
-
-/* ========================================
-   RESPONSIVE - SMARTPHONE
-   ======================================== */
-
-@media (max-width: 600px) {
-
-  header {
-    padding: 15px;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
-  nav ul {
-    gap: 8px;
-  }
-
-  nav a {
-    padding: 7px 9px;
-    font-size: 14px;
-  }
-
-  main {
-    margin: 15px 10px;
-    padding: 20px 15px;
-
-    border-radius: 6px;
-  }
-
-  main h2 {
-    font-size: 23px;
-  }
-
-  form input[type="text"],
-  form input[type="email"],
-  form input[type="tel"],
-  form select,
-  form textarea {
-    font-size: 16px;
-  }
-
-  form button {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 14px;
-  }
-}
-/* =========================================
-   SERVIZI RICHIESTI
-   ========================================= */
-
-.descrizione-servizi {
-  margin-top: -2px;
-  margin-bottom: 15px;
-
-  color: #777;
-  font-size: 14px;
-}
-
-.checkbox-servizi {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 12px;
-}
-
-.checkbox-servizi label {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin: 0;
-
-  padding: 13px 15px;
-
-  background-color: white;
-
-  border: 1px solid #d5dce3;
-
-  border-radius: 7px;
-
-  color: #444;
-
-  font-weight: normal;
-
-  cursor: pointer;
-
-  transition: all 0.2s ease;
-}
-
-.checkbox-servizi label:hover {
-
-  border-color: #0066b3;
-
-  background-color: #f4f8fc;
-}
-
-
-/* Checkbox */
-
-.checkbox-servizi input[type="checkbox"] {
-
+form input[type="checkbox"] {
   width: 18px;
   height: 18px;
 
@@ -430,33 +250,240 @@ footer p {
   cursor: pointer;
 }
 
+form label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-/* Casella selezionata */
+  color: #555;
 
-.checkbox-servizi label:has(input:checked) {
+  font-weight: normal;
 
+  cursor: pointer;
+}
+
+.servizi-richiesti {
+  margin-bottom: 25px;
+}
+
+.servizi-richiesti > label {
+  margin-bottom: 5px;
+}
+
+.descrizione-servizi {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+.checkbox-servizi {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.checkbox-servizi label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 52px;
+
+  margin: 0;
+
+  padding: 12px 15px;
+
+  background-color: white;
+
+  border: 1px solid #d5dce3;
+
+  border-radius: 7px;
+
+  color: #444;
+
+  font-size: 14px;
+  font-weight: normal;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.checkbox-servizi label:hover {
+  background-color: #f4f8fc;
+
+  border-color: #0066b3;
+
+  transform: translateY(-1px);
+}
+
+.checkbox-servizi label:has(input[type="checkbox"]:checked) {
   background-color: #eaf3fb;
 
   border-color: #004080;
 
   color: #003f7d;
 
-  font-weight: bold;
+  box-shadow: 0 2px 7px rgba(0, 64, 128, 0.1);
 
+  font-weight: bold;
 }
 
+.checkbox-servizi input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
 
-/* =========================================
-   SMARTPHONE
-   ========================================= */
+  margin: 0;
 
-@media (max-width: 600px) {
+  flex-shrink: 0;
 
-  .checkbox-servizi {
+  accent-color: #004080;
 
-    grid-template-columns: 1fr;
+  cursor: pointer;
+}
 
+.foto-geometra {
+  margin: 25px auto;
+  text-align: center;
+}
+
+.foto-geometra img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mappa {
+  margin-top: 25px;
+
+  border: 2px solid #d9dee4;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+footer {
+  background: linear-gradient(135deg, #003366, #004080, #0059a6);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 18px;
+
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 20px 15px;
   }
 
+  header h1 {
+    font-size: 25px;
+  }
+
+  nav ul {
+    gap: 4px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  main {
+    width: calc(100% - 20px);
+
+    margin: 20px auto;
+
+    border-radius: 8px;
+  }
+
+  main section {
+    padding: 25px 18px;
+  }
+
+  main h2 {
+    font-size: 25px;
+  }
+
+  form {
+    padding: 20px 15px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="file"],
+  form select,
+  form textarea {
+    font-size: 16px;
+  }
+
+  .checkbox-servizi {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-servizi label {
+    min-height: 50px;
+  }
+
+  form button {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
 
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 8px;
+  }
+
+  main section {
+    padding: 20px 14px;
+  }
+
+  form {
+    padding: 17px 12px;
+  }
+}
