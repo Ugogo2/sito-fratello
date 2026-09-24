@@ -359,3 +359,104 @@ footer p {
     font-size: 14px;
   }
 }
+/* =========================================
+   SERVIZI RICHIESTI
+   ========================================= */
+
+.descrizione-servizi {
+  margin-top: -2px;
+  margin-bottom: 15px;
+
+  color: #777;
+  font-size: 14px;
+}
+
+.checkbox-servizi {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.checkbox-servizi label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0;
+
+  padding: 13px 15px;
+
+  background-color: white;
+
+  border: 1px solid #d5dce3;
+
+  border-radius: 7px;
+
+  color: #444;
+
+  font-weight: normal;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.checkbox-servizi label:hover {
+
+  border-color: #0066b3;
+
+  background-color: #f4f8fc;
+}
+
+
+/* Checkbox */
+
+.checkbox-servizi input[type="checkbox"] {
+
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
+
+  flex-shrink: 0;
+
+  accent-color: #004080;
+
+  cursor: pointer;
+}
+
+
+/* Casella selezionata */
+
+.checkbox-servizi label:has(input:checked) {
+
+  background-color: #eaf3fb;
+
+  border-color: #004080;
+
+  color: #003f7d;
+
+  font-weight: bold;
+
+}
+
+
+/* =========================================
+   SMARTPHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .checkbox-servizi {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
