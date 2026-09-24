@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Michele Badi">
+  <meta name="description" content="Richiedi un preventivo allo Studio Tecnico Badi di Varese.">
+  <title>Studio Tecnico Badi - Richiedi un preventivo</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Studio Tecnico Badi</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servizi.html">Servizi</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="preventivo.html">Preventivo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Richiedi un preventivo</h2>
+
+      <p>
+        Compila il modulo per richiedere un preventivo.
+        Descrivi brevemente il lavoro di cui hai bisogno e verrai ricontattato
+        per approfondire la richiesta.
+      </p>
+
+      <form action="#" method="post">
+
+        <div>
+          <label for="nome">Nome e cognome *</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Inserisci nome e cognome">
+        </div>
+
+        <div>
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="nome@esempio.it">
+        </div>
+
+        <div>
+          <label for="telefono">Telefono</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Numero di telefono">
+        </div>
+
+        <div>
+          <label for="servizio">Servizio richiesto *</label>
+          <select id="servizio" name="servizio" required>
+            <option value="">-- Seleziona un servizio --</option>
+            <option value="edilizia">Edilizia</option>
+            <option value="catasto">Pratiche catastali</option>
+            <option value="topografia">Topografia</option>
+            <option value="rilievi">Rilievi</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="messaggio">Descrizione della richiesta *</label>
+          <textarea
+            id="messaggio"
+            name="messaggio"
+            rows="7"
+            required
+            placeholder="Descrivi brevemente il lavoro di cui hai bisogno..."></textarea>
+        </div>
+
+        <div>
+          <label for="allegato">Eventuale documento o planimetria</label>
+          <input
+            type="file"
+            id="allegato"
+            name="allegato"
+            accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="privacy" required>
+            Dichiaro di aver letto l'informativa sulla privacy *
+          </label>
+        </div>
+
+        <button type="submit">Invia richiesta di preventivo</button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Studio Tecnico Badi - Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
