@@ -377,14 +377,11 @@ form label:has(input[type="checkbox"]) {
 
 footer {
   background: linear-gradient(135deg, #003366, #004080, #0059a6);
-
   color: white;
-
   text-align: center;
-
   padding: 18px;
-
-  margin-top: 40px;
+  margin-top: auto;
+  width: 100%;
 }
 
 footer p {
