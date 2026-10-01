@@ -377,20 +377,40 @@ form label:has(input[type="checkbox"]) {
 
 footer {
   background: linear-gradient(135deg, #003366, #004080, #0059a6);
+
   color: white;
+
   text-align: center;
+
   padding: 18px;
-  margin-top: auto;
+
   width: 100%;
+
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 footer p {
   margin: 0;
-
   color: white;
-
   font-size: 14px;
 }
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #dbeeff;
+}
+
 
 ul {
   padding-left: 25px;
@@ -460,7 +480,9 @@ li {
   }
 
   footer {
-    font-size: 14px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 12px;
   }
 }
 
